@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #05050a;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+}
+#orb1 { 
+    background: #ff007f; top: -100px; left: -50px;
+}
+
+#orb2 { 
+    background: #00f2fe; bottom: -50px; right: -50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(5, 5, 10, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: #00f2fe;
+    text-shadow: 0 0 15px #00f2fe;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-chat-btn {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    z-index: 5;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 0, 127, 0.4);
+    border-radius: 50px;
+    margin-bottom: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ff007f;
+    text-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 5rem;
+    line-height: 0.95;
+    margin-bottom: 25px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff007f, #7928ca, #00f2fe);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 4s linear infinite;
+}
+
+@keyframes textShine {
+    to { 
+        background-position: 200% center;
+    }
+}
+
+p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.3);
+    background: linear-gradient(90deg, #fff, #00f2fe);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #475569;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+.footer-social{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.footer-social a{
+    color:white;
+    font-size:1.8rem;
+    transition:all 0.3s ease;
+}
+
+.footer-social a:hover{
+    transform:translateY(-5px) scale(1.1);
+}
+@media(max-width: 768px) {
+    h1 { font-size: 3.2rem; }
+    p { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .nav-chat-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .glow-orb {
+        width: 250px;
+        height: 250px;
+        filter: blur(90px);
+    }
+    #orb1 {
+        top: -50px; left: -30px;
+    }
+    #orb2 {
+        bottom: -30px; right: -30px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 1.05;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+    }
+
+    p {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+        line-height: 1.4;
+    }
+
+    .btn {
+        padding: 16px 32px;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+    footer {
+        padding: 20px;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-social a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+}

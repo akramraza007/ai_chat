@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="/static/css/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+    <div class="glow-orb" id="orb1"></div>
+    <div class="glow-orb" id="orb2"></div>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <span>AI.CHAT</span>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/chatbot" class="nav-chat-btn">Chatbot</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">
+                <i class="fas fa-bolt"></i>
+                FASTAPI + MISTRAL AI VIBES ONLY
+            </span>
+            <h1 class="animate-title">
+                Build Smarter<br><span class="gradient-text">Conversations.</span>
+            </h1>
+            <p class="animate-text">
+                Experience a modern AI chatbot built with FastAPI and Mistral AI. Fast, intelligent, and literally out of this world.
+            </p>
+            <a href="/chatbot" class="btn animate-btn">
+                Start Chatting <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fas fa-brain"></i> AI.CHAT</h3>
+                <p>
+                    Powered by FastAPI and Mistral AI.
+                    Built for fast, intelligent conversations.
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/akramraza007" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/_akram_raza786/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/akram-raza-0557b8331/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                © 2026 AI.CHAT • Designed & Developed by
+                <strong>Akram Raza</strong>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            gsap.to("#orb1", {
+                x: '30vw', y: '20vh', duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut"
+            });
+            gsap.to("#orb2", {
+                x: '-20vw', y: '-30vh', duration: 10, repeat: -1, yoyo: true, ease: "sine.inOut"
+            });
+
+            const tl = gsap.timeline();
+            tl.from("nav", { 
+                y: -50, opacity: 0, duration: 0.8, ease: "power3.out"
+            })
+            .from(".badge",{
+                scale: 0.8, opacity: 0, duration: 0.5, ease: "back.out(1.7)" 
+            }, "-=0.3")
+            .from(".animate-title",{
+                y: 40, opacity: 0, duration: 0.8, ease: "power4.out"
+            } ,"-=0.4")
+            .from(".animate-text",{
+                y: 20, opacity: 0, duration: 0.6
+            }, "-=0.4")
+            .from(".animate-btn",{
+                scale: 0.9, opacity: 0, duration: 0.5, ease: "back.out(2)"
+            }, "-=0.2");
+        });
+    </script>
+</body>
+</html>

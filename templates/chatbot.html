@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="/static/css/chatbot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+    <div class="glow-orb" id="orb1">
+
+    </div>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <span>AI.CHAT</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/chatbot">Chatbot</a>
+        </div>
+    </nav>
+
+    <div class="chat-wrapper">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="header-info">
+                    <select id="modeSelector" class="mode-dropdown">
+                        <option value="happy">🔥 Happy Mode</option>
+                        <option value="sad">💀 Sad Mode</option>
+                        <option value="funny">🌶️ Funny Mode</option>
+                    </select>
+                    <span class="status-dot"></span>
+                </div>
+                <div id="typingIndicator">
+                    <span class="sparkle">✨</span> typing thoughts...
+                </div>
+            </div>
+
+            <div id="chatbox">
+                <div class="message bot">
+                    LETTT'S GOOO! I'm hyped to chat! What are we cooking up today? 🙌🔥
+                </div>
+            </div>
+
+            <form id="chatForm">
+                <input type="text" id="message" placeholder="Drop a message here..." autocomplete="off" required>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fas fa-brain"></i> AI.CHAT</h3>
+                <p>
+                    Powered by FastAPI and Mistral AI.
+                    Built for fast, intelligent conversations.
+                </p>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/akramraza007" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/_akram_raza786/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            
+                <a href="https://www.linkedin.com/in/akram-raza-0557b8331/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                © 2026 AI.CHAT • Designed & Developed by
+                <strong>Akram Raza</strong>
+            </p>
+        </div>
+    </footer>
+    <script src="/static/js/chatbot.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            gsap.from(".chat-container", {
+                scale: 0.95,
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power4.out"
+            });
+        });
+    </script>
+</body>
+</html>
