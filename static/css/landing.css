@@ -25,6 +25,7 @@ body {
     opacity: 0.4;
     pointer-events: none;
 }
+
 #orb1 { 
     background: #ff007f; top: -100px; left: -50px;
 }
@@ -95,6 +96,7 @@ nav {
 
 .hero-content {
     max-width: 800px;
+    width: 100%;
 }
 
 .badge {
@@ -176,24 +178,21 @@ footer {
     z-index: 10;
 }
 
-.footer-social{
-    display:flex;
-    justify-content:center;
-    gap:25px;
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
 }
 
-.footer-social a{
-    color:white;
-    font-size:1.8rem;
-    transition:all 0.3s ease;
+.footer-social a {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
 }
 
-.footer-social a:hover{
-    transform:translateY(-5px) scale(1.1);
-}
-@media(max-width: 768px) {
-    h1 { font-size: 3.2rem; }
-    p { font-size: 1.1rem; }
+.footer-social a:hover {
+    transform: translateY(-5px) scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -215,7 +214,7 @@ footer {
     }
 
     .hero {
-        padding: 20px 15px;
+        padding: 60px 20px;
     }
 
     .glow-orb {
@@ -223,38 +222,45 @@ footer {
         height: 250px;
         filter: blur(90px);
     }
+
     #orb1 {
         top: -50px; left: -30px;
     }
+
     #orb2 {
         bottom: -30px; right: -30px;
     }
 
     h1 {
         font-size: 2.8rem;
-        line-height: 1.05;
+        line-height: 1.1;
         margin-bottom: 20px;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
     }
 
     p {
         font-size: 1.05rem;
-        margin-bottom: 30px;
-        line-height: 1.4;
+        margin-bottom: 35px;
+        line-height: 1.5;
     }
 
     .btn {
         padding: 16px 32px;
         font-size: 1rem;
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        max-width: 100%;
     }
+
     footer {
-        padding: 20px;
+        padding: 30px 20px;
         font-size: 0.8rem;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .footer-social {
+        gap: 20px;
     }
 
     .footer-social a {
@@ -264,10 +270,15 @@ footer {
 
 @media (max-width: 380px) {
     h1 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
     
     .nav-links {
         gap: 10px;
+    }
+    
+    .badge {
+        font-size: 0.75rem;
+        padding: 6px 12px;
     }
 }
