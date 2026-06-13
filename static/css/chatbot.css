@@ -277,15 +277,9 @@ footer {
 }
 
 @media(max-width: 768px) {
-    h1 {
-        font-size: 3.2rem;
-    }
-    p {
-        font-size: 1.1rem;
-    }
-}
+    h1 { font-size: 3.2rem; }
+    p { font-size: 1.1rem; }
 
-@media (max-width: 768px) {
     body {
         display: flex;
         flex-direction: column;
@@ -314,7 +308,7 @@ footer {
     .chat-container {
         padding: 16px;
         border-radius: 20px;
-        height: 78vh;
+        height: 75vh;
         display: flex;
         flex-direction: column;
     }
@@ -380,7 +374,7 @@ footer {
 
 @media (max-width: 380px) {
     .chat-container {
-        height: 82vh;
+        height: 80vh;
     }
     .nav-links {
         gap: 8px;
